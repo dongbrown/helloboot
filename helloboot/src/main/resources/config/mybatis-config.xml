@@ -4,5 +4,6 @@
 	<typeAliases>
 		<typeAlias type="com.bs.helloboot.model.dto.Member" alias="member"/>
 		<typeAlias type="com.bs.helloboot.board.model.dto.Board" alias="board"/>
+		<typeAlias type="com.bs.helloboot.schedule.model.dto.Schedule" alias="schedule"/>
 	</typeAliases>
 </configuration>

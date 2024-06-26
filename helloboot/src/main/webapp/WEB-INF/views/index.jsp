@@ -19,6 +19,10 @@
 		<a href="${path }/board/boardlist.do">게시글</a>
 	</h3>
 	
+	<h3>
+		<a href="${path }/schedule">일정관리</a>
+	</h3>
+	
 	<h3>파일 업로드처리하기</h3>
 	<form action="${path }/fileupload.do" method="post" enctype="multipart/form-data">
 		<input type="file" name="upFile">

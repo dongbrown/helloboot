@@ -1,4 +1,4 @@
-package com.bs.helloboot.board.model.service;
+		package com.bs.helloboot.board.model.service;
 
 import java.util.List;
 
