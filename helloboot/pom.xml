@@ -81,8 +81,8 @@
 			<version>3.0.3</version>
 			<scope>test</scope>
 		</dependency>
-		
-		<!-- 
+
+		<!--
 			jsp를 view화면으로 적용하기
 			추가 모듈을 등록
 			tomcat-embed-jasper, jakarta.servlet.jsp.jstl-api, jakarta.servlet.jsp.jstl
@@ -103,7 +103,35 @@
 		</dependency>
 
 
-		
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -1,0 +1,37 @@
+server: 
+  port: 9090 
+  
+spring:
+  config:
+    import:
+    - datasource.properties
+    - logdata.properties
+#다중값은 '-'로 
+
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@14.36.141.71:8877:xe
+    username: web
+    password: web
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  servlet: 
+    multipart: 
+      max-file-size: 500MB 
+mybatis:
+  config-location: classpath:config/mybatis-config.xml
+  mapper-locations: classpath:mapper/**/*-mappers.xml
+  
+# 사용자정의 property값 설정
+linux: 
+  home: /home/goodee
+  url: 14.36.141.71
+  port: 8877
+  
+## 환경변수값 가져오기
+#os:
+#  path: ${path}
+#  javahome: ${JAVA_HOME}
+     
