@@ -18,11 +18,13 @@
 	<h3>
 		<a href="${path }/board/boardlist.do">게시글</a>
 	</h3>
-	
+
 	<h3>
 		<a href="${path }/schedule">일정관리</a>
 	</h3>
-	
+
+
+
 	<h3>파일 업로드처리하기</h3>
 	<form action="${path }/fileupload.do" method="post" enctype="multipart/form-data">
 		<input type="file" name="upFile">
@@ -31,6 +33,21 @@
 		<input type="file" name="upFile">
 		<input type="submit" value="저장">
 	</form>
-	
+
+	<button onclick="accessChatting();">채팅 접속하기</button>
+	<div id="chattingcontainer">
+
+	</div>
+
+	<script>
+		let chatServer
+		const accessChatting = () => {
+			chatServer = new WebSocket("ws://localhost:9090/chat");
+			chatServer.onopen = (response) => {
+				console.log("서버 접속");
+			}
+		}
+	</script>
+
 </body>
 </html>

@@ -1,15 +1,17 @@
 package com.bs.helloboot.controller;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.bs.helloboot.common.LinuxData;
+import com.bs.helloboot.model.dto.Member;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -30,12 +32,23 @@ public class ViewTestController {
 
 
 	@RequestMapping("/")
-	public String main() {
+	public String main(Model m) {
 		log.info("{}", linuxData);
 //		log.info(home);
 //		log.info(url);
 //		log.info("{}", port);
+		m.addAttribute("name", "김동훈");
+		Member member = Member.builder()
+				.userId("donghoon")
+				.password("1234")
+				.name("김동훈")
+				.age(29)
+				.address("경기도 안양시")
+				.build();
+		m.addAttribute("member", member);
 
+		List<String> names = List.of("김명준", "최선웅", "고재현", "임성욱");
+		m.addAttribute("names", names);
 
 		return "index";
 	}

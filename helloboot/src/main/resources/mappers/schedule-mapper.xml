@@ -2,10 +2,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
 <mapper namespace="schedule">
+    <resultMap id="scheduleResultMap" type="com.bs.helloboot.schedule.model.dto.Schedule">
+        <id property="id" column="SCHEDULE_NO"/>
+        <result property="title" column="SCHEDULE_TITLE"/>
+        <result property="description" column="SCHEDULE_CONTENT"/>
+        <result property="color" column="SCHEDULE_LABEL"/>
+        <result property="location" column="SCHEDULE_PLACE"/>
+        <result property="type" column="SCHEDULE_TYPE"/>
+        <result property="start" column="SCHDULE_START_DATE"/>
+        <result property="end" column="SCHDULE_END_DATE"/>
+    </resultMap>
 
-	<select id="getSchedule" resultType="schedule">
-		SELECT * FROM SCHEDULE
-	</select>
-	
+    <select id="getSchedule" resultMap="scheduleResultMap">
+        SELECT
+            SCHEDULE_NO,
+            SCHEDULE_TITLE,
+            SCHEDULE_CONTENT,
+            SCHEDULE_LABEL,
+            SCHEDULE_PLACE,
+            SCHEDULE_TYPE,
+            SCHDULE_START_DATE,
+            SCHDULE_END_DATE
+        FROM SCHEDULE
+    </select>
+
+    <update id="updateSchedule" parameterType="schedule">
+        UPDATE SCHEDULE
+        SET SCHDULE_START_DATE = #{start},
+            SCHDULE_END_DATE = #{end}
+        WHERE SCHEDULE_NO = #{id}
+    </update>
 </mapper>
 

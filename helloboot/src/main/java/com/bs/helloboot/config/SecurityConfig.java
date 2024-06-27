@@ -44,7 +44,7 @@ public class SecurityConfig {
 
             .formLogin(form -> form
             		.loginProcessingUrl("/logintest")
-             		.loginPage("/loginpage")  // -> login.jsp로, 설정 안하면 기본 로그인페이지
+//             		.loginPage("/loginpage")  // -> login.jsp로, 설정 안하면 기본 로그인페이지
 //            		.successForwardUrl(null)
 //            		.failureForwardUrl(null)
 //            		.loginPage(null)

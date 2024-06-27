@@ -9,10 +9,20 @@ spring:
 #다중값은 '-'로 
 
   datasource:
+#    driver-class-name: oracle.jdbc.OracleDriver
+#    url: jdbc:oracle:thin:@14.36.141.71:8877:xe
+#    username: web
+#    password: web
     driver-class-name: oracle.jdbc.OracleDriver
-    url: jdbc:oracle:thin:@14.36.141.71:8877:xe
-    username: web
-    password: web
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: spring
+    password: spring
+#  thymeleaf:
+#    enabled: true
+    
+    
+    
+    
   mvc:
     view:
       prefix: /WEB-INF/views/

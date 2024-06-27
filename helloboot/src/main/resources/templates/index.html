@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>start</title>
+</head>
+<body>
+	<p th:text="우와타임리프다"></p>
+	<h3 th:text="${name}"></h3>
+
+	<h3>회원 상세 정보</h3>
+	<div th:object="${member}">
+		<h4 th:text="|이름: *{name}|"></h4>
+		<h4 th:text="|아이디: *{userId}|"></h4>
+		<h4 th:text="|나이: *{age}|"></h4>
+		<p th:if="*{age>20}">미성년</p>
+
+		<h4 th:text="|주소: *{address}|"></h4>
+	</div>
+
+	<div>
+		<h3>팀원</h3>
+		<ul th:each="t:${names}">
+			<li th:text="${t}"></li>
+		</ul>
+	</div>
+
+	<a th:href="@{/test}">test로 요청</a>
+	<a th:href="@{/member/{id}(id=${name})}">회원 조회</a>
+
+
+
+</body>
+</html>
