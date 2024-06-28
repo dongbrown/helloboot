@@ -10,4 +10,6 @@ public interface ScheduleDao {
 	List<Schedule> getSchedules(SqlSession session);
 
 	void updateSchedule(Schedule schedule, SqlSession session);
+
+	void addSchedule(Schedule schedule, SqlSession session);
 }

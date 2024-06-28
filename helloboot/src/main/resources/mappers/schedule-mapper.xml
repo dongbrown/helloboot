@@ -11,6 +11,7 @@
         <result property="type" column="SCHEDULE_TYPE"/>
         <result property="start" column="SCHDULE_START_DATE"/>
         <result property="end" column="SCHDULE_END_DATE"/>
+        <!-- <result property="allDay" column="SCHEDULE_ALL_DAY"/> -->
     </resultMap>
 
     <select id="getSchedule" resultMap="scheduleResultMap">
@@ -26,11 +27,37 @@
         FROM SCHEDULE
     </select>
 
-    <update id="updateSchedule" parameterType="schedule">
+    <update id="updateSchedule" parameterType="com.bs.helloboot.schedule.model.dto.Schedule">
         UPDATE SCHEDULE
-        SET SCHDULE_START_DATE = #{start},
+        SET SCHEDULE_TITLE = #{title},
+            SCHEDULE_CONTENT = #{description},
+            SCHEDULE_LABEL = #{color},
+            SCHEDULE_PLACE = #{location},
+            SCHEDULE_TYPE = #{type},
+            SCHDULE_START_DATE = #{start},
             SCHDULE_END_DATE = #{end}
         WHERE SCHEDULE_NO = #{id}
     </update>
-</mapper>
 
+    <insert id="addSchedule" parameterType="com.bs.helloboot.schedule.model.dto.Schedule">
+        INSERT INTO SCHEDULE (
+        	SCHEDULE_NO,
+            SCHEDULE_TITLE,
+            SCHEDULE_CONTENT,
+            SCHEDULE_LABEL,
+            SCHEDULE_PLACE,
+            SCHEDULE_TYPE,
+            SCHDULE_START_DATE,
+            SCHDULE_END_DATE
+        ) VALUES (
+        	SEQ_SCHEDULE.NEXTVAL,
+            #{title},
+            #{description, jdbcType=VARCHAR},
+            #{color},
+            #{location},
+            #{type},
+            #{start},
+            #{end}
+        )
+    </insert>
+</mapper>
