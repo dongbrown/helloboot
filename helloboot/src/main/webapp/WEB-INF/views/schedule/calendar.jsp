@@ -259,6 +259,8 @@ jQuery(document).ready(function($) {
                             <input type="color" class="form-control" id="viewScheduleColor">
                         </div>
                         <button type="submit" class="btn btn-primary">수정</button>
+                        <button type="submit" class="btn btn-primary">삭제</button>
+
                     </form>
                 </div>
             </div>
