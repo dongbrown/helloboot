@@ -1,0 +1,277 @@
+2024-06-29T14:29:32.641+09:00  INFO 53145 --- [restartedMain] com.bs.helloboot.HellobootApplication    : Starting HellobootApplication using Java 17.0.11 with PID 53145 (/Users/donghoon/git/helloboot/helloboot/target/classes started by donghoon in /Users/donghoon/git/helloboot/helloboot)
+2024-06-29T14:29:32.644+09:00 DEBUG 53145 --- [restartedMain] com.bs.helloboot.HellobootApplication    : Running with Spring Boot v3.2.7, Spring v6.1.10
+2024-06-29T14:29:32.644+09:00  INFO 53145 --- [restartedMain] com.bs.helloboot.HellobootApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-06-29T14:29:32.675+09:00  INFO 53145 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/donghoon/.m2/repository/com/oracle/database/jdbc/ojdbc11/21.9.0.0/ojdbc11-21.9.0.0.jar referenced one or more files that do not exist: file:/Users/donghoon/.m2/repository/com/oracle/database/jdbc/ojdbc11/21.9.0.0/oraclepki.jar
+2024-06-29T14:29:32.675+09:00  INFO 53145 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-29T14:29:32.675+09:00  INFO 53145 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-29T14:29:33.126+09:00  INFO 53145 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-29T14:29:33.142+09:00  INFO 53145 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2024-06-29T14:29:33.738+09:00  INFO 53145 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-29T14:29:33.755+09:00  INFO 53145 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-29T14:29:33.755+09:00  INFO 53145 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-29T14:29:33.903+09:00  INFO 53145 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-06-29T14:29:33.907+09:00  INFO 53145 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-29T14:29:33.907+09:00  INFO 53145 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1232 ms
+2024-06-29T14:29:34.258+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:29:34.259+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.config.MyBeanConfig getMapper
+2024-06-29T14:29:34.260+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:29:34.397+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:29:34.397+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.config.WebMvcConfig registerWebSocketHandlers
+2024-06-29T14:29:34.397+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:29:34.435+09:00  INFO 53145 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-06-29T14:29:34.437+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:29:34.437+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.config.WebMvcConfig addInterceptors
+2024-06-29T14:29:34.437+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:29:34.437+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:29:34.437+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.config.WebMvcConfig testInterceptor
+2024-06-29T14:29:34.437+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:29:34.441+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:29:34.441+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.config.WebMvcConfig addCorsMappings
+2024-06-29T14:29:34.441+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:29:34.488+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:29:34.488+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.config.WebMvcConfig addViewControllers
+2024-06-29T14:29:34.488+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:29:34.533+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:29:34.533+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.config.SecurityConfig authenticationFilter
+2024-06-29T14:29:34.533+09:00 DEBUG 53145 --- [restartedMain] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:29:34.574+09:00  INFO 53145 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41ed457b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ad5ce43, org.springframework.security.web.context.SecurityContextHolderFilter@38f3813c, org.springframework.security.web.header.HeaderWriterFilter@2e99007d, org.springframework.web.filter.CorsFilter@972d560, org.springframework.security.web.authentication.logout.LogoutFilter@31b27276, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@131216d7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7190e29f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@61d5dcc5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4297f491, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2500f831, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a389b19, org.springframework.security.web.access.ExceptionTranslationFilter@162b4036, org.springframework.security.web.access.intercept.AuthorizationFilter@4d30d875]
+2024-06-29T14:29:34.795+09:00  INFO 53145 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-29T14:29:34.799+09:00  WARN 53145 --- [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-06-29T14:29:36.451+09:00  INFO 53145 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@30ded6f1
+2024-06-29T14:29:36.453+09:00  INFO 53145 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-29T14:29:36.624+09:00  INFO 53145 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-29T14:29:36.658+09:00  INFO 53145 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-06-29T14:29:36.668+09:00  INFO 53145 --- [restartedMain] com.bs.helloboot.HellobootApplication    : Started HellobootApplication in 4.278 seconds (process running for 4.814)
+2024-06-29T14:29:46.351+09:00  INFO 53145 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-29T14:29:46.352+09:00  INFO 53145 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-29T14:29:46.355+09:00  INFO 53145 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-29T14:30:22.006+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:22.007+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.security.controller.UserPasswordAuthenticationProvider supports
+2024-06-29T14:30:22.007+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:22.008+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:22.008+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.security.controller.UserPasswordAuthenticationProvider authenticate
+2024-06-29T14:30:22.008+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:22.011+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:22.012+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.mappers.MemberMapper selectMemberbyId
+2024-06-29T14:30:22.012+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:22.097+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.b.h.c.m.MemberMapper.selectMemberbyId  : ==>  Preparing: SELECT * FROM MEMBER WHERE USERID = ?
+2024-06-29T14:30:22.179+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.b.h.c.m.MemberMapper.selectMemberbyId  : ==> Parameters: admin(String)
+2024-06-29T14:30:22.269+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.b.h.c.m.MemberMapper.selectMemberbyId  : <==      Total: 1
+2024-06-29T14:30:22.449+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:22.449+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:22.449+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:22.449+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:22.449+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.b.h.c.interceptor.TestInterceptor      : /community/feed
+2024-06-29T14:30:22.449+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:22.459+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:22.459+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.controller.FeedController showFeed
+2024-06-29T14:30:22.459+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.029+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:23.029+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:23.029+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.029+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:23.029+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.b.h.c.interceptor.TestInterceptor      : /css/feed.css
+2024-06-29T14:30:23.029+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:23.066+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:23.067+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:23.069+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.070+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:23.071+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.b.h.c.interceptor.TestInterceptor      : /community/getPosts
+2024-06-29T14:30:23.071+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:23.076+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:23.076+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:23.076+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.076+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:23.076+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.b.h.c.interceptor.TestInterceptor      : /favicon.ico
+2024-06-29T14:30:23.076+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.controller.FeedController getPosts
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.b.h.c.interceptor.TestInterceptor      : /error
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.model.service.FeedService getFeeds
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.model.dao.FeedDao getFeeds
+2024-06-29T14:30:23.083+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.853+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:23.853+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:23.853+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:23.853+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.b.h.c.interceptor.TestInterceptor      : /img/undraw_profile_1.svg
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.b.h.c.interceptor.TestInterceptor      : /img/heart.svg
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.b.h.c.interceptor.TestInterceptor      : /css/feed.css
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.b.h.c.interceptor.TestInterceptor      : /img/comment.svg
+2024-06-29T14:30:23.854+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:23.855+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:25.503+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.504+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:25.504+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.504+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:25.504+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.b.h.c.interceptor.TestInterceptor      : /community/getPosts
+2024-06-29T14:30:25.504+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:25.505+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.505+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.controller.FeedController getPosts
+2024-06-29T14:30:25.505+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.505+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.505+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.model.service.FeedService getFeeds
+2024-06-29T14:30:25.505+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.505+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.506+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.model.dao.FeedDao getFeeds
+2024-06-29T14:30:25.506+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.b.h.c.interceptor.TestInterceptor      : /img/undraw_profile_1.svg
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.b.h.c.interceptor.TestInterceptor      : /img/heart.svg
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:25.589+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.b.h.c.interceptor.TestInterceptor      : /img/comment.svg
+2024-06-29T14:30:25.590+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.590+09:00 DEBUG 53145 --- [http-nio-9090-exec-10] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:25.590+09:00 DEBUG 53145 --- [http-nio-9090-exec-9] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:25.590+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:25.590+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.b.h.c.interceptor.TestInterceptor      : /css/feed.css
+2024-06-29T14:30:25.590+09:00 DEBUG 53145 --- [http-nio-9090-exec-2] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:25.821+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.821+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:25.821+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.821+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:25.821+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.b.h.c.interceptor.TestInterceptor      : /community/getPosts
+2024-06-29T14:30:25.821+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:25.822+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.822+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.controller.FeedController getPosts
+2024-06-29T14:30:25.822+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.822+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.822+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.model.service.FeedService getFeeds
+2024-06-29T14:30:25.822+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.822+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.822+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.model.dao.FeedDao getFeeds
+2024-06-29T14:30:25.822+09:00 DEBUG 53145 --- [http-nio-9090-exec-1] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.b.h.c.interceptor.TestInterceptor      : /img/comment.svg
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-3] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:25.888+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:25.889+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.b.h.c.interceptor.TestInterceptor      : /img/heart.svg
+2024-06-29T14:30:25.889+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.b.h.c.interceptor.TestInterceptor      : /img/undraw_profile_1.svg
+2024-06-29T14:30:25.889+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:25.889+09:00 DEBUG 53145 --- [http-nio-9090-exec-6] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:25.889+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.b.h.c.interceptor.TestInterceptor      : /css/feed.css
+2024-06-29T14:30:25.889+09:00 DEBUG 53145 --- [http-nio-9090-exec-4] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:25.889+09:00 DEBUG 53145 --- [http-nio-9090-exec-5] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:26.653+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:26.653+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:26.653+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:26.653+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:26.653+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.b.h.c.interceptor.TestInterceptor      : /community/getPosts
+2024-06-29T14:30:26.653+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:30:26.654+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:26.654+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.controller.FeedController getPosts
+2024-06-29T14:30:26.654+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:26.654+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:26.654+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.model.service.FeedService getFeeds
+2024-06-29T14:30:26.654+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:26.654+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:26.654+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.feed.model.dao.FeedDao getFeeds
+2024-06-29T14:30:26.654+09:00 DEBUG 53145 --- [http-nio-9090-exec-8] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:26.767+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : ===== before aop =====
+2024-06-29T14:30:26.767+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : com.bs.helloboot.common.interceptor.TestInterceptor preHandle
+2024-06-29T14:30:26.767+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.bs.helloboot.common.aop.LoggerAspect   : ======================
+2024-06-29T14:30:26.767+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.b.h.c.interceptor.TestInterceptor      : ============인터셉터 적용하기============
+2024-06-29T14:30:26.767+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.b.h.c.interceptor.TestInterceptor      : /css/feed.css
+2024-06-29T14:30:26.767+09:00 DEBUG 53145 --- [http-nio-9090-exec-7] c.b.h.c.interceptor.TestInterceptor      : ====================================
+2024-06-29T14:53:01.188+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m54s690ms).
+2024-06-29T15:12:49.771+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m18s564ms).
+2024-06-29T15:27:14.185+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m24s408ms).
+2024-06-29T15:31:46.013+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m31s828ms).
+2024-06-29T15:35:09.046+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m52s908ms).
+2024-06-29T15:36:58.241+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m49s194ms).
+2024-06-29T15:43:43.798+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m15s548ms).
+2024-06-29T15:56:41.784+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m57s987ms).
+2024-06-29T15:59:53.850+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m42s54ms).
+2024-06-29T16:01:36.468+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s618ms).
+2024-06-29T16:19:47.299+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m40s820ms).
+2024-06-29T16:23:21.720+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m34s420ms).
+2024-06-29T16:25:47.978+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m26s259ms).
+2024-06-29T16:26:37.952+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s973ms).
+2024-06-29T16:29:20.304+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m42s352ms).
+2024-06-29T16:33:24.842+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m34s524ms).
+2024-06-29T16:36:07.870+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m43s26ms).
+2024-06-29T16:37:39.626+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m871ms).
+2024-06-29T17:13:55.999+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m41s24ms).
+2024-06-29T17:14:23.847+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=27s847ms), soft-evicting connections from pool.
+2024-06-29T17:17:22.169+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m58s323ms).
+2024-06-29T17:20:22.949+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m781ms).
+2024-06-29T17:23:11.850+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m48s900ms).
+2024-06-29T17:26:30.185+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m47s479ms).
+2024-06-29T18:01:12.689+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m42s505ms).
+2024-06-29T18:11:06.163+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m53s473ms).
+2024-06-29T18:13:17.025+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m39s208ms).
+2024-06-29T18:15:01.512+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m44s487ms).
+2024-06-29T18:16:52.389+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m20s864ms).
+2024-06-29T18:30:54.657+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m2s267ms).
+2024-06-29T19:10:44.473+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m49s815ms).
+2024-06-29T19:16:02.599+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m18s127ms).
+2024-06-29T19:28:17.191+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m14s592ms).
+2024-06-29T19:29:54.261+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s61ms).
+2024-06-29T19:53:14.158+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=23m19s898ms).
+2024-06-29T19:55:42.105+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m57s935ms).
+2024-06-29T19:57:54.788+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m12s683ms).
+2024-06-29T20:09:14.372+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m19s584ms).
+2024-06-29T20:13:14.989+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m617ms).
+2024-06-29T20:17:17.280+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m2s291ms).
+2024-06-29T20:27:47.875+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m30s594ms).
+2024-06-29T21:07:27.650+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m39s775ms).
+2024-06-29T21:18:05.987+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m38s337ms).
+2024-06-29T21:22:47.443+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m41s457ms).
+2024-06-29T22:03:00.794+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m13s350ms).
+2024-06-29T22:19:02.705+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m1s912ms).
+2024-06-29T22:22:13.556+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m10s850ms).
+2024-06-29T22:26:17.856+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m34s295ms).
+2024-06-29T22:37:21.155+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m33s287ms).
+2024-06-29T22:57:22.483+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m1s327ms).
+2024-06-29T23:20:04.679+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m42s197ms).
+2024-06-29T23:42:10.111+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m5s432ms).
+2024-06-29T23:52:53.611+09:00  WARN 53145 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m43s499ms).

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="feed">
+    <resultMap type="com.bs.helloboot.feed.model.dto.Feed" id="feedResultMap">
+        <id property="feedNo" column="FEED_NO" />
+        <result property="feedContent" column="FEED_CONTENT"/>
+        <result property="feedEnrollDate" column="FEED_ENROLLDATE"/>
+        <result property="communityNo" column="COMMUNITY_NO"/>
+        <result property="employeeNo" column="EMPLOYEE_NO"/>
+    </resultMap>
+
+    <select id="getCommunities" resultMap="feedResultMap">
+		SELECT
+		    c.COMMUNITY_NO,
+		    c.COMMUNITY_TITLE,
+		    c.COMMUNITY_INTRODUCE,
+		    c.COMMUNITY_IS_OPEN,
+		    cu.EMPLOYEE_NO,
+		    cu.COMUNITY_USER_IS_ACCEPT
+		FROM
+		    "COMMUNITY" c
+		JOIN
+		    "COMUNITY_USER" cu
+		ON
+		    c.COMMUNITY_NO = cu.COMUNITY_NO
+		WHERE
+		    cu.EMPLOYEE_NO = 1;
+    </select>
+</mapper>
