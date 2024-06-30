@@ -8,5 +8,7 @@
 		<typeAlias type="com.bs.helloboot.model.dto.Member" alias="member"/>
 		<typeAlias type="com.bs.helloboot.board.model.dto.Board" alias="board"/>
 		<typeAlias type="com.bs.helloboot.schedule.model.dto.Schedule" alias="schedule"/>
+		<typeAlias type="com.bs.helloboot.feed.model.dto.Feed" alias="feed"/>
+		<typeAlias type="com.bs.helloboot.community.model.dto.Community" alias="community"/>
 	</typeAliases>
 </configuration>

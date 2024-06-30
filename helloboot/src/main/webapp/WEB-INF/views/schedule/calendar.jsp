@@ -9,25 +9,44 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js'></script>
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
 <script>
-
-// 수정 사항
-// 시작 날짜보다 이전 종료 날짜 선택 못하도록
-// 드래그앤 드롭 일정 수정 가능하도록
-// 참석자 추가 버튼 눌러 (type : share)만 가능하도록 -> 해당 참석자에게도 일정 추가
-// type : my / share 선택해서 해당 일정 select
-
-
 jQuery(document).ready(function($) {
-    // jQuery의 $ 대신 jQuery 사용 (noConflict 모드 사용) -> 다른 라이브러리에서 $ 사용 가능
-    // Query 대신 jQuery()를 사용하여 jQuery 코드를 작성해야 함
-
-    // FullCalendar 초기화
     $('#calendar').fullCalendar({
         timeZone: 'local',
         editable: true,
         events: function(start, end, timezone, callback) {
-            // 이벤트 데이터 가져오기
             $.ajax({
                 url: '${pageContext.request.contextPath}/schedule/schedule',
                 type: 'GET',
@@ -52,7 +71,6 @@ jQuery(document).ready(function($) {
             });
         },
         eventDrop: function(event, delta, revertFunc) {
-            // 이벤트 드롭 시 처리
             if (!confirm("이 변경 사항을 저장하시겠습니까?")) {
                 revertFunc();
             } else {
@@ -83,28 +101,34 @@ jQuery(document).ready(function($) {
             }
         },
         eventRender: function(event, element) {
-            // 이벤트 렌더링 시 배경색 설정
             element.css('background-color', event.color);
         },
         dayClick: function(date, jsEvent, view) {
-            // 날짜 클릭 시 "일정 추가" 모달 열기
-            $('#scheduleModal').modal('show');
-            $('#scheduleDate').val(date.format('YYYY-MM-DD')); // 클릭한 날짜를 모달의 시작 날짜 필드에 설정
+            $('#scheduleModal').css('display', 'block');
+            $('#scheduleDate').val(date.format('YYYY-MM-DD'));
         },
         eventClick: function(calEvent, jsEvent, view) {
-            // 이벤트 클릭 시 "일정 상세 보기/수정" 모달 열기
-            $('#viewScheduleModal').modal('show');
+            $('#viewScheduleModal').css('display', 'block');
             $('#viewScheduleId').val(calEvent.id);
             $('#viewScheduleTitle').val(calEvent.title);
             $('#viewScheduleStart').val(moment(calEvent.start).format('YYYY-MM-DD'));
             $('#viewScheduleEnd').val(calEvent.end ? moment(calEvent.end).format('YYYY-MM-DD') : '');
             $('#viewScheduleAllDay').prop('checked', calEvent.allDay);
             $('#viewScheduleColor').val(calEvent.color);
-            $('#viewScheduleType').val(calEvent.type);
+            $(`input[name="viewScheduleType"][value="${calEvent.type}"]`).prop('checked', true);
         }
     });
 
-    // "일정 추가" 폼 제출 시 처리
+    $('.close').click(function() {
+        $(this).closest('.modal').css('display', 'none');
+    });
+
+    $(window).click(function(event) {
+        if ($(event.target).hasClass('modal')) {
+            $('.modal').css('display', 'none');
+        }
+    });
+
     $('#addScheduleForm').on('submit', function(e) {
         e.preventDefault();
         var formData = {
@@ -113,7 +137,7 @@ jQuery(document).ready(function($) {
             end: $('#scheduleEnd').val(),
             allDay: $('#scheduleAllDay').is(':checked'),
             color: $('#scheduleColor').val(),
-            type: $('input[name="scheduleType"]:checked').val() // 추가한 코드
+            type: $('input[name="scheduleType"]:checked').val()
         };
 
         $.ajax({
@@ -123,8 +147,8 @@ jQuery(document).ready(function($) {
             data: JSON.stringify(formData),
             success: function(response) {
                 alert('일정이 성공적으로 추가되었습니다.');
-                $('#scheduleModal').modal('hide'); // 모달 닫기
-                $('#calendar').fullCalendar('refetchEvents'); // 캘린더 이벤트 다시 불러오기
+                $('#scheduleModal').css('display', 'none');
+                $('#calendar').fullCalendar('refetchEvents');
             },
             error: function(xhr, status, error) {
                 alert('일정 추가 중 오류가 발생했습니다.');
@@ -132,7 +156,6 @@ jQuery(document).ready(function($) {
         });
     });
 
-    // "일정 수정" 폼 제출 시 처리
     $('#updateScheduleForm').on('submit', function(e) {
         e.preventDefault();
         var formData = {
@@ -152,11 +175,33 @@ jQuery(document).ready(function($) {
             data: JSON.stringify(formData),
             success: function(response) {
                 alert('일정이 성공적으로 수정되었습니다.');
-                $('#viewScheduleModal').modal('hide'); // 모달 닫기
-                $('#calendar').fullCalendar('refetchEvents'); // 캘린더 이벤트 다시 불러오기
+                $('#viewScheduleModal').css('display', 'none');
+                $('#calendar').fullCalendar('refetchEvents');
             },
             error: function(xhr, status, error) {
                 alert('일정 수정 중 오류가 발생했습니다.');
+            }
+        });
+    });
+
+    $(document).on('click', '#deleteScheduleBtn', function(){
+        if(!confirm("정말로 이 일정을 삭제하시겠습니까?")){
+            return;
+        }
+        var scheduleId = $('#viewScheduleId').val();
+
+        $.ajax({
+            url: '${pageContext.request.contextPath}/schedule/deleteSchedule',
+            type: 'POST',
+            data: {id: scheduleId},
+            success: function(response){
+                alert('일정이 삭제되었습니다.');
+                $('#viewScheduleModal').css('display', 'none');
+                $('#calendar').fullCalendar('refetchEvents');
+            },
+            error: function(xhr, status, error){
+                alert('일정 삭제 중 오류가 발생했습니다: ' + xhr.responseText);
+                console.error("Error details:", xhr.responseText);
             }
         });
     });
@@ -167,104 +212,89 @@ jQuery(document).ready(function($) {
 <div id="calendar"></div>
 
 <!-- 일정 추가 모달 -->
-<div class="modal fade" id="scheduleModal" tabindex="-1" role="dialog" aria-labelledby="scheduleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="scheduleModalLabel">일정 추가</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+<div id="scheduleModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h5>일정 추가</h5>
+        <form id="addScheduleForm">
+            <div class="form-group">
+                <label>타입</label>
+                <input type="radio" id="scheduleTypeMy" name="scheduleType" value="my" checked>
+                <label for="scheduleTypeMy">내 캘린더</label>
+                <input type="radio" id="scheduleTypeShare" name="scheduleType" value="share">
+                <label for="scheduleTypeShare">공유 캘린더</label>
             </div>
-            <div class="modal-body">
-                <form id="addScheduleForm">
-                   	<div class="form-group">
-                        <label>타입</label>
-                        <input type="radio" id="scheduleTypeMy" name="scheduleType" value="my" checked>
-                        <label for="scheduleTypeMy">내 캘린더</label>
-                        <input type="radio" id="scheduleTypeShare" name="scheduleType" value="share">
-                        <label for="scheduleTypeShare">공유 캘린더</label>
-                    </div>
-                    <div class="form-group">
-                        <label for="scheduleTitle">제목</label>
-                        <input type="text" class="form-control" id="scheduleTitle" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="scheduleContent">내용</label>
-                        <input type="text" class="form-control" id="scheduleContent" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="scheduleDate">시작 날짜</label>
-                        <input type="date" class="form-control" id="scheduleDate" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="scheduleEnd">종료 날짜</label>
-                        <input type="date" class="form-control" id="scheduleEnd">
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="scheduleAllDay">
-                        <label class="form-check-label" for="scheduleAllDay">종일</label>
-                    </div>
-                    <div class="form-group">
-                        <label for="scheduleColor">색상</label>
-                        <input type="color" class="form-control" id="scheduleColor">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">저장</button>
-                </form>
+            <div class="form-group">
+                <label for="scheduleTitle">제목</label>
+                <input type="text" class="form-control" id="scheduleTitle" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="scheduleContent">내용</label>
+                <input type="text" class="form-control" id="scheduleContent" required>
+            </div>
+            <div class="form-group">
+                <label for="scheduleDate">시작 날짜</label>
+                <input type="date" class="form-control" id="scheduleDate" required>
+            </div>
+            <div class="form-group">
+                <label for="scheduleEnd">종료 날짜</label>
+                <input type="date" class="form-control" id="scheduleEnd">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="scheduleAllDay">
+                <label class="form-check-label" for="scheduleAllDay">종일</label>
+            </div>
+            <div class="form-group">
+                <label for="scheduleColor">색상</label>
+                <input type="color" class="form-control" id="scheduleColor">
+            </div>
+            <button type="submit" class="btn btn-primary">저장</button>
+        </form>
     </div>
 </div>
 
-
- <!-- 일정 상세 보기 및 수정 모달 -->
-    <div class="modal fade" id="viewScheduleModal" tabindex="-1" role="dialog" aria-labelledby="viewScheduleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="viewScheduleModalLabel">일정 상세/수정</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="updateScheduleForm">
-                    <div class="form-group">
-                        <label>타입</label>
-                        <input type="radio" id="scheduleTypeMy" name="scheduleType" value="my" checked>
-                        <label for="scheduleTypeMy">My</label>
-                        <input type="radio" id="scheduleTypeShare" name="scheduleType" value="share">
-                        <label for="scheduleTypeShare">Share</label>
-                    </div>
-                        <input type="hidden" id="viewScheduleId">
-                        <div class="form-group">
-                            <label for="viewScheduleTitle">제목</label>
-                            <input type="text" class="form-control" id="viewScheduleTitle" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="viewScheduleStart">시작 날짜</label>
-                            <input type="date" class="form-control" id="viewScheduleStart" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="viewScheduleEnd">종료 날짜</label>
-                            <input type="date" class="form-control" id="viewScheduleEnd">
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="viewScheduleAllDay">
-                            <label class="form-check-label" for="viewScheduleAllDay">종일</label>
-                        </div>
-                        <div class="form-group">
-                            <label for="viewScheduleColor">색상</label>
-                            <input type="color" class="form-control" id="viewScheduleColor">
-                        </div>
-                        <button type="submit" class="btn btn-primary">수정</button>
-                        <button type="submit" class="btn btn-primary">삭제</button>
-
-                    </form>
-                </div>
+<!-- 일정 상세 보기 및 수정 모달 -->
+<div id="viewScheduleModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h5>일정 상세/수정</h5>
+        <form id="updateScheduleForm">
+            <div class="form-group">
+                <label>타입</label>
+                <input type="radio" id="viewScheduleTypeMy" name="viewScheduleType" value="my">
+                <label for="viewScheduleTypeMy">내 캘린더</label>
+                <input type="radio" id="viewScheduleTypeShare" name="viewScheduleType" value="share">
+                <label for="viewScheduleTypeShare">공유 캘린더</label>
             </div>
-        </div>
+            <input type="hidden" id="viewScheduleId">
+            <div class="form-group">
+                <label for="viewScheduleTitle">제목</label>
+                <input type="text" class="form-control" id="viewScheduleTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="viewScheduleContent">내용</label>
+                <input type="text" class="form-control" id="viewScheduleContent" required>
+            </div>
+            <div class="form-group">
+                <label for="viewScheduleStart">시작 날짜</label>
+                <input type="date" class="form-control" id="viewScheduleStart" required>
+            </div>
+            <div class="form-group">
+                <label for="viewScheduleEnd">종료 날짜</label>
+                <input type="date" class="form-control" id="viewScheduleEnd">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="viewScheduleAllDay">
+                <label class="form-check-label" for="viewScheduleAllDay">종일</label>
+            </div>
+            <div class="form-group">
+                <label for="viewScheduleColor">색상</label>
+                <input type="color" class="form-control" id="viewScheduleColor">
+            </div>
+            <button type="submit" class="btn btn-primary">수정</button>
+            <button type="button" class="btn btn-danger" id="deleteScheduleBtn">삭제</button>
+        </form>
     </div>
+</div>
 </body>
 </html>

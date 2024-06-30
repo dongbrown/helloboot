@@ -25,5 +25,10 @@ public class ScheduleDaoImpl implements ScheduleDao {
 		session.insert("schedule.addSchedule", schedule);
 	}
 
+	@Override
+	public int deleteSchedule(String id, SqlSession session) {
+		return session.delete("schedule.deleteSchedule", id);
+	}
+
 
 }

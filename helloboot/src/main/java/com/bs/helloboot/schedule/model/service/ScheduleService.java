@@ -8,5 +8,6 @@ public interface ScheduleService {
     List<Schedule> getSchedules();
     void updateSchedule(Schedule schedule);
 	void addSchedule(Schedule schedule);
+	int deleteSchedule(String id);
 
 }

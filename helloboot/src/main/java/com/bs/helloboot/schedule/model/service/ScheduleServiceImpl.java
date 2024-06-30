@@ -34,4 +34,9 @@ public class ScheduleServiceImpl implements ScheduleService {
 		dao.addSchedule(schedule, session);
 	}
 
+	@Override
+	public int deleteSchedule(String id) {
+		return dao.deleteSchedule(id, session);
+	}
+
 }

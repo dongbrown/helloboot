@@ -12,4 +12,6 @@ public interface ScheduleDao {
 	void updateSchedule(Schedule schedule, SqlSession session);
 
 	void addSchedule(Schedule schedule, SqlSession session);
+
+	int deleteSchedule(String id, SqlSession session);
 }

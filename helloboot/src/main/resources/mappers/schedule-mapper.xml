@@ -60,4 +60,8 @@
             #{end}
         )
     </insert>
+
+    <delete id="deleteSchedule">
+    	DELETE FROM SCHEDULE WHERE SCHEDULE_NO = #{id}
+    </delete>
 </mapper>
